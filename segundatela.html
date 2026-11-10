@@ -1,505 +1,579 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#650d2b">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Assista à apresentação | Cláudia</title>
+    <title>Método de Blindagem Emocional</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class="video-page">
+<body>
 
-  <main>
+    <main class="video-page" id="videoPage">
 
-      <!-- PRIMEIRO PAINEL: VÍDEO -->
-      <section class="video-screen">
-      <!-- FUNDO FLORAL -->
+        <!-- ==================================
+             HEADER
+        =================================== -->
+
+        <header class="video-header">
+
+            <!-- MENU À ESQUERDA -->
+
+            <div class="header-menu">
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+
+                <!-- OPÇÕES DO MENU -->
+
+                <nav class="menu-options" id="menuOptions">
+
+                    <a href="#metodo">Método</a>
+                    <a href="#bonus">Benefícios</a>
+                    <a href="#bonus">Bônus</a>
+                    <a href="#offerCard">Garantia</a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- TÍTULO À DIREITA -->
+
+            <div class="header-brand">
+
+                <h1>MÉTODO DE BLINDAGEM EMOCIONAL</h1>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==================================
+             VÍDEO PRINCIPAL
+        =================================== -->
+
+        <section class="video-container" id="videoContainer">
+
+            <video
+                class="main-video"
+                id="mainVideo"
+                autoplay
+                muted
+                playsinline
+                preload="auto"
+            >
+
+                <source src="video/vsl-demo1.mp4" type="video/mp4">
+
+                Seu navegador não suporta vídeos.
+
+            </video>
+
+            <div class="video-progress" aria-hidden="true">
+                <div class="video-progress-fill" id="videoProgressFill"></div>
+            </div>
+
+
+            <!-- ==================================
+                 CONTROLES INFERIORES
+            =================================== -->
+
+            <div class="video-controls">
+
+
+                <!-- CONTROLE DE SOM -->
+
+                <button
+                    class="video-control sound-control"
+                    id="soundButton"
+                    aria-label="Ativar som"
+                    title="Ativar som"
+                >
+
+                    <svg
+                        id="soundIcon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+
+                    </svg>
+
+                </button>
+
+
+                <!-- EXPANDIR TELA -->
+
+                <button
+                    class="video-control fullscreen-control"
+                    id="fullscreenButton"
+                    aria-label="Expandir tela"
+                    title="Expandir tela"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+
+                        <polyline points="8 3 3 3 3 8"></polyline>
+
+                        <line x1="3" y1="3" x2="9" y2="9"></line>
+
+                        <polyline points="16 3 21 3 21 8"></polyline>
+
+                        <line x1="21" y1="3" x2="15" y2="9"></line>
+
+                        <polyline points="3 16 3 21 8 21"></polyline>
+
+                        <line x1="3" y1="21" x2="9" y2="15"></line>
+
+                        <polyline points="21 16 21 21 16 21"></polyline>
+
+                        <line x1="21" y1="21" x2="15" y2="15"></line>
+
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             FUTURAS SEÇÕES
+             SERÃO ADICIONADAS DEPOIS
+        =================================== -->
+
+        
+<!-- ==========================================
+     CONTEÚDO HORIZONTAL
+========================================== -->
+
+<div class="sales-horizontal" id="salesHorizontal">
+
+
+  <!-- ==========================================
+       PÁGINA 01: OFERTA, FLORES E GARANTIA
+  ========================================== -->
+
+  <section class="sales-panel offer-panel">
+
+    <div class="offer-content">
+
       <img
         src="img/floresfundo.png"
-        class="floral-background"
+        class="intro-flowers"
         alt=""
         aria-hidden="true"
       >
 
-      <!-- HEADER -->
-      <header class="site-header">
+      <!-- CARD DE INVESTIMENTO -->
+      <div class="offer-card" id="offerCard">
 
-        <a href="index.html" class="brand">
-          CLÁUDIA<span>.</span>
-        </a>
-
-        <span class="header-caption">
+        <span class="offer-eyebrow">
           MENTORIA BLINDAGEM EMOCIONAL
         </span>
 
-      </header>
-
-      <!-- ÁREA DO VÍDEO -->
-      <div class="video-content">
-
-        <div class="video-frame" id="videoFrame">
-
-          <video
-            id="vslVideo"
-            playsinline
-            preload="metadata"
-          >
-            <source src="video/vsl-demo.mp4" type="video/mp4">
-
-            Seu navegador não suporta vídeos.
-
-          </video>
-
-          <!-- AVISO DE ERRO -->
-          <div
-            class="video-placeholder"
-            id="videoPlaceholder"
-          >
-
-            <span class="placeholder-play">
-              <span></span>
-            </span>
-
-            <p>
-              Não foi possível carregar o vídeo.
-            </p>
-
-            <small>
-              Verifique o arquivo video/vsl-demo.mp4
-            </small>
-
-          </div>
-
-          <!-- CONTROLES -->
-          <div class="video-controls">
-
-            <button
-              class="control-btn"
-              id="soundButton"
-              type="button"
-              aria-label="Ativar som"
-            >
-
-              <svg id="soundIcon" viewBox="0 0 24 24">
-
-                <path d="M11 5 6 9H3v6h3l5 4V5Z"></path>
-
-                <path d="M15 9a5 5 0 0 1 0 6"></path>
-
-                <path d="M18 6a9 9 0 0 1 0 12"></path>
-
-              </svg>
-
-              <span id="soundLabel">Som</span>
-
-            </button>
-
-            <button
-              class="control-btn"
-              id="fullscreenButton"
-              type="button"
-              aria-label="Abrir vídeo em tela cheia"
-            >
-
-              <svg viewBox="0 0 24 24">
-
-                <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
-
-                <path d="M16 3h3a2 2 0 0 1 2 2v3"></path>
-
-                <path d="M21 16v3a2 2 0 0 1-2 2h-3"></path>
-
-                <path d="M3 16v3a2 2 0 0 0 2 2h3"></path>
-
-              </svg>
-
-              <span>Tela cheia</span>
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- AVISO DO VÍDEO -->
-      <div
-        class="video-hint"
-        id="videoHint"
-        role="dialog"
-        aria-labelledby="videoHintTitle"
-      >
-
-        <button
-          class="hint-close"
-          id="closeVideoHint"
-          type="button"
-          aria-label="Fechar aviso"
-        >
-          ×
-        </button>
-
-        <span class="hint-icon">▶</span>
-
-        <p id="videoHintTitle">
-          Assista ao vídeo e descubra a melhor solução para o seu problema.
-        </p>
-
-        <span class="hint-small">
-          Encontre uma nova possibilidade para transformar sua história.
-        </span>
-
-      </div>
-
-    </section>
-
-    
-<!-- ==========================================
-     EXPERIÊNCIA HORIZONTAL — CONTEÚDO DA VSL
-========================================== -->
-
-<div class="horizontal-experience" id="horizontalExperience">
-
-  <div class="horizontal-track" id="horizontalTrack">
-
-    <!-- 01 — INVESTIMENTO -->
-    <section class="horizontal-panel investment-panel" id="investimento">
-
-      <div class="panel-content investment-content">
-
-        <span class="hx-kicker">MENTORIA BLINDAGEM EMOCIONAL</span>
-
-        <h2>
+        <h1>
           Chegou a hora de<br>
-          <em>voltar para você.</em>
-        </h2>
+          <em>voltar para você</em>
+        </h1>
 
-        <p class="hx-description">
+        <p class="offer-description">
           Um caminho de reconhecimento, reconstrução e fortalecimento
           emocional para mulheres que desejam recuperar a própria identidade.
         </p>
 
-        <div class="investment-price-box">
-          <span>INVESTIMENTO</span>
-          <strong>US$ 697,00</strong>
+        <div class="price-area">
+          <span class="price-label">INVESTIMENTO</span>
+          <strong class="price">US$ 697,00</strong>
         </div>
 
-        <a href="#investimento" class="hx-button">
+        <a href="#inscricao" class="main-button">
           QUERO GARANTIR MINHA VAGA
         </a>
 
-        <small>Conheça todos os detalhes da mentoria</small>
+        <span class="offer-note">
+          Conheça todos os detalhes da mentoria
+        </span>
 
       </div>
 
-    </section>
 
-
-    <!-- 02 — GARANTIA -->
-    <section class="horizontal-panel guarantee-panel">
-
-      <div class="panel-content guarantee-content">
-
-        <span class="hx-kicker">SEGURANÇA PARA SUA DECISÃO</span>
+      <!-- CARD DE GARANTIA -->
+      <div class="guarantee-card" id="guaranteeCard">
 
         <div class="guarantee-symbol">✓</div>
 
-        <h2>
-          Sua jornada merece
-          <em>clareza e segurança.</em>
-        </h2>
-
-        <p>
-          Consulte as condições e os detalhes da sua inscrição
-          antes de começar.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- 03 — MÉTODO -->
-    <section class="horizontal-panel method-section" id="metodo">
-
-      <div class="panel-content method-content">
-
-        <div class="method-heading">
-          <span class="hx-kicker">O MÉTODO</span>
-
-          <h2>
-            UM PROCESSO DE DENTRO
-            <em>PARA FORA.</em>
-          </h2>
+        <div>
+          <span class="guarantee-title">
+            Sua jornada merece clareza e segurança.
+          </span>
 
           <p>
-            O Método de Blindagem é organizado em cinco etapas que conduzem
-            a jornada de reconhecimento e reconstrução.
+            Consulte as condições e os detalhes da sua inscrição antes de começar.
           </p>
         </div>
 
-        <div class="method-cards">
+      </div>
 
-          <article class="method-item">
-            <span class="method-number">01</span>
-            <span class="method-line"></span>
-            <h3>Reconhecer</h3>
-            <p>
-              Identificar padrões, situações e comportamentos que precisam
-              ser compreendidos.
-            </p>
-          </article>
+    </div>
 
-          <article class="method-item">
-            <span class="method-number">02</span>
-            <span class="method-line"></span>
-            <h3>Desromantizar</h3>
-            <p>
-              Olhar para a realidade com mais clareza, sem idealizações
-              que dificultem o reconhecimento da própria experiência.
-            </p>
-          </article>
+  </section>
 
-          <article class="method-item">
-            <span class="method-number">03</span>
-            <span class="method-line"></span>
-            <h3>Devolver</h3>
-            <p>
-              Reconhecer o que não pertence a você e começar a estabelecer
-              limites mais conscientes.
-            </p>
-          </article>
 
-          <article class="method-item">
-            <span class="method-number">04</span>
-            <span class="method-line"></span>
-            <h3>Reconstruir</h3>
-            <p>
-              Retomar sua identidade, fortalecer sua autoestima e voltar
-              a reconhecer suas próprias escolhas.
-            </p>
-          </article>
+  <!-- ==========================================
+       PÁGINA 02: MÉTODO DE BLINDAGEM
+  ========================================== -->
 
-          <article class="method-item">
-            <span class="method-number">05</span>
-            <span class="method-line"></span>
-            <h3>Blindar</h3>
-            <p>
-              Desenvolver consciência e recursos pessoais para proteger
-              seus limites e seu processo de reconstrução.
-            </p>
-          </article>
+  <section class="sales-panel method-section" id="metodo">
 
-        </div>
+    <div class="method-heading section-padding">
 
-        <span class="method-footer">
-          O SEU PROCESSO, NO SEU TEMPO.
-        </span>
+      <span class="section-kicker reveal">O MÉTODO</span>
+
+      <h2 class="reveal">
+        UM PROCESSO DE DENTRO<br>
+        <em>PARA FORA</em>
+      </h2>
+
+      <p class="reveal">
+        O Método de Blindagem é organizado em cinco etapas que conduzem
+        a jornada de reconhecimento e reconstrução.
+      </p>
+
+    </div>
+
+    <div class="method-viewport">
+
+      <div class="method-track" id="methodTrack">
+
+        <article class="method-item">
+          <span class="method-number">01</span>
+          <span class="method-line"></span>
+          <h3>Reconhecer</h3>
+          <p>
+            Identificar padrões, situações e comportamentos que precisam
+            ser compreendidos.
+          </p>
+        </article>
+
+        <article class="method-item">
+          <span class="method-number">02</span>
+          <span class="method-line"></span>
+          <h3>Desromantizar</h3>
+          <p>
+            Olhar para a realidade com mais clareza, sem idealizações
+            que dificultem o reconhecimento da própria experiência.
+          </p>
+        </article>
+
+        <article class="method-item">
+          <span class="method-number">03</span>
+          <span class="method-line"></span>
+          <h3>Devolver</h3>
+          <p>
+            Reconhecer o que não pertence a você e começar a estabelecer
+            limites mais conscientes.
+          </p>
+        </article>
+
+        <article class="method-item">
+          <span class="method-number">04</span>
+          <span class="method-line"></span>
+          <h3>Reconstruir</h3>
+          <p>
+            Retomar sua identidade, fortalecer sua autoestima e voltar
+            a reconhecer suas próprias escolhas.
+          </p>
+        </article>
+
+        <article class="method-item">
+          <span class="method-number">05</span>
+          <span class="method-line"></span>
+          <h3>Blindar</h3>
+          <p>
+            Desenvolver consciência e recursos pessoais para proteger
+            seus limites e seu processo de reconstrução.
+          </p>
+        </article>
 
       </div>
 
-    </section>
+    </div>
+
+    <div class="method-footer section-padding">
+      <span>O SEU PROCESSO, NO SEU TEMPO.</span>
+    </div>
+
+  </section>
 
 
-    <!-- 04 — BÔNUS -->
-    <section class="horizontal-panel bonus-section" id="bonus">
+  <!-- ==========================================
+       PÁGINA 03: BÔNUS
+  ========================================== -->
 
-      <div class="panel-content bonus-content">
+  <section class="sales-panel bonus-section section-padding" id="bonus">
 
-        <div class="bonus-heading">
-          <span class="hx-kicker">BÔNUS</span>
+    <div class="bonus-heading">
 
-          <h2>
-            UM CUIDADO QUE ACOMPANHA
-            <em>SUA JORNADA.</em>
-          </h2>
+      <span class="section-kicker reveal">BÔNUS</span>
 
+      <h2 class="reveal">
+        UM CUIDADO QUE ACOMPANHA
+        <em>SUA JORNADA.</em>
+      </h2>
+
+      <p class="reveal">
+        Além das etapas do método, a experiência reúne conteúdos
+        complementares para aprofundar sua reflexão.
+      </p>
+
+    </div>
+
+    <div class="bonus-list">
+
+      <!-- BÔNUS 01 -->
+      <article class="bonus-item reveal" tabindex="0">
+
+        <div class="bonus-circle">
+          <span class="bonus-number">01</span>
+
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 52 C18 42 17 27 32 12 C47 27 46 42 32 52Z"/>
+            <path d="M32 51 C18 49 10 39 10 28 C24 29 31 37 32 51Z"/>
+            <path d="M32 51 C46 49 54 39 54 28 C40 29 33 37 32 51Z"/>
+            <path d="M32 52 V57"/>
+          </svg>
+        </div>
+
+        <div class="bonus-content">
+          <h3>Desvinculação com o narcisista</h3>
           <p>
-            Além das etapas do método, a experiência reúne conteúdos
-            complementares para aprofundar sua reflexão.
+            Um conteúdo voltado à compreensão do vínculo, do desgaste
+            emocional e do processo de encerramento dessa relação.
           </p>
         </div>
 
-        <div class="bonus-grid">
+      </article>
 
-          <article class="bonus-item">
-            <span class="bonus-number">01</span>
-            <div class="bonus-circle">✧</div>
-            <h3>Desvinculação com o narcisista</h3>
-            <p>
-              Um conteúdo voltado à compreensão do vínculo, do desgaste
-              emocional e do processo de encerramento dessa relação.
-            </p>
-          </article>
 
-          <article class="bonus-item">
-            <span class="bonus-number">02</span>
-            <div class="bonus-circle">♡</div>
-            <h3>Mulher restaurada</h3>
-            <p>
-              Uma proposta de reflexão para resgatar sua identidade,
-              reconhecer seu valor e fortalecer a conexão consigo mesma.
-            </p>
-          </article>
+      <!-- BÔNUS 02 -->
+      <article class="bonus-item reveal" tabindex="0">
 
-          <article class="bonus-item">
-            <span class="bonus-number">03</span>
-            <div class="bonus-circle">✧</div>
-            <h3>Áudios de desprogramação e reprogramação</h3>
-            <p>
-              Áudios complementares para acompanhar momentos de reflexão
-              e apoiar o processo de reconstrução pessoal.
-            </p>
-          </article>
+        <div class="bonus-circle">
+          <span class="bonus-number">02</span>
 
-          <article class="bonus-item">
-            <span class="bonus-number">04</span>
-            <div class="bonus-circle">♫</div>
-            <h3>Áudios curtos de acompanhamento</h3>
-            <p>
-              Conteúdos em áudio para acompanhar você também fora dos
-              momentos dedicados às aulas.
-            </p>
-          </article>
-
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 53 C27 48 10 36 10 23 C10 14 21 10 28 18 L32 23 L36 18 C43 10 54 14 54 23 C54 36 37 48 32 53Z"/>
+          </svg>
         </div>
 
-      </div>
-
-    </section>
-
-
-    <!-- 05 — PERGUNTAS FREQUENTES -->
-    <section class="horizontal-panel faq-section" id="duvidas">
-
-      <div class="panel-content faq-content">
-
-        <div class="faq-heading">
-          <span class="hx-kicker">AINDA TEM DÚVIDAS?</span>
-          <h2>Perguntas <em>frequentes.</em></h2>
+        <div class="bonus-content">
+          <h3>Mulher restaurada</h3>
+          <p>
+            Uma proposta de reflexão para resgatar sua identidade,
+            reconhecer seu valor e fortalecer a conexão consigo mesma.
+          </p>
         </div>
 
-        <div class="faq-list">
+      </article>
 
-          <details class="faq-item">
-            <summary>O que é a Mentoria Blindagem Emocional?</summary>
-            <p>
-              É uma proposta de desenvolvimento e fortalecimento pessoal,
-              organizada em cinco etapas: Reconhecer, Desromantizar,
-              Devolver, Reconstruir e Blindar.
-            </p>
-          </details>
 
-          <details class="faq-item">
-            <summary>O que está incluído na mentoria?</summary>
-            <p>
-              A experiência contempla as cinco etapas do método e os
-              conteúdos complementares descritos na seção de bônus.
-            </p>
-          </details>
+      <!-- BÔNUS 03 -->
+      <article class="bonus-item reveal" tabindex="0">
 
-          <details class="faq-item">
-            <summary>Como faço minha inscrição?</summary>
-            <p>
-              Utilize o botão de inscrição desta página para acessar as
-              informações oficiais sobre a participação.
-            </p>
-          </details>
+        <div class="bonus-circle">
+          <span class="bonus-number">03</span>
 
-          <details class="faq-item">
-            <summary>A mentoria substitui acompanhamento psicológico ou jurídico?</summary>
-            <p>
-              Não. A mentoria é um conteúdo complementar e não substitui
-              acompanhamento psicológico, psiquiátrico ou orientação jurídica.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>Onde posso consultar as condições da inscrição?</summary>
-            <p>
-              As condições, os detalhes de acesso e as informações comerciais
-              devem ser consultados na página oficial de inscrição.
-            </p>
-          </details>
-
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M25 13 H39"/>
+            <path d="M28 13 V27 L17 47 C15 51 18 55 23 55 H41 C46 55 49 51 47 47 L36 27 V13"/>
+            <path d="M23 42 H41"/>
+            <circle cx="29" cy="47" r="1.5"/>
+            <circle cx="36" cy="36" r="1.5"/>
+          </svg>
         </div>
 
-      </div>
+        <div class="bonus-content">
+          <h3>Áudios de desprogramação e reprogramação</h3>
+          <p>
+            Áudios complementares para acompanhar momentos de reflexão
+            e apoiar o processo de reconstrução pessoal.
+          </p>
+        </div>
 
-    </section>
+      </article>
 
 
-    <!-- 06 — CHAMADA FINAL -->
-    <section class="horizontal-panel final-cta" id="inscricao">
+      <!-- BÔNUS 04 -->
+      <article class="bonus-item reveal" tabindex="0">
 
-      <div class="panel-content final-cta-content">
+        <div class="bonus-circle">
+          <span class="bonus-number">04</span>
 
-        <span class="hx-kicker">SEU NOVO COMEÇO</span>
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="12" y="20" width="40" height="29" rx="14"/>
+            <path d="M12 34 V31 C12 20 20 12 32 12 C44 12 52 20 52 31 V34"/>
+            <path d="M12 33 H18 V45 H12 Z"/>
+            <path d="M52 33 H46 V45 H52 Z"/>
+            <path d="M46 49 C42 54 36 55 31 55"/>
+          </svg>
+        </div>
 
+        <div class="bonus-content">
+          <h3>Áudios curtos de acompanhamento</h3>
+          <p>
+            Conteúdos em áudio para acompanhar você também fora dos
+            momentos dedicados às aulas.
+          </p>
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==========================================
+       PÁGINA 04: PERGUNTAS FREQUENTES
+  ========================================== -->
+
+  <section class="sales-panel faq-section section-padding" id="duvidas">
+
+    <div class="faq-heading">
+
+      <span class="section-kicker reveal">AINDA TEM DÚVIDAS?</span>
+
+      <h2 class="reveal">
+        Duvidas <em>frequentes</em>
+      </h2>
+
+    </div>
+
+    <div class="faq-list">
+
+      <details class="faq-item reveal">
+        <summary>O que é a Mentoria Blindagem Emocional?</summary>
         <p>
-          Você quer apenas sair desse relacionamento? Ou quer construir uma vida
-          em que você nunca mais aceite viver algo parecido?
+          É uma proposta de desenvolvimento e fortalecimento pessoal,
+          organizada em cinco etapas: Reconhecer, Desromantizar,
+          Devolver, Reconstruir e Blindar.
         </p>
+      </details>
 
-        <span class="final-cta-subtext">
-          São duas coisas diferentes. Só uma delas liberta de verdade.
-        </span>
-
-        <a href="#investimento" class="hx-button">
-          GARANTIR MINHA VAGA
-          <span>→</span>
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- 07 — RODAPÉ -->
-    <section class="horizontal-panel footer-panel">
-
-      <footer class="horizontal-footer">
-
-        <div class="footer-brand">
-          CLÁUDIA<span>.</span>
-        </div>
-
+      <details class="faq-item reveal">
+        <summary>O que está incluído na mentoria?</summary>
         <p>
-          © 2026 Blindagem Emocional.
-          Todos os direitos reservados.
+          A experiência contempla as cinco etapas do método e os
+          conteúdos complementares descritos na seção de bônus.
         </p>
+      </details>
 
-        <div class="footer-security">
-          <span>♧</span>
-          Compra segura
-        </div>
-
-        <p class="footer-safety">
-          Se você está em perigo imediato,
-          procure ajuda local agora.
+      <details class="faq-item reveal">
+        <summary>Como faço minha inscrição?</summary>
+        <p>
+          Utilize o botão de inscrição desta página para acessar as
+          informações oficiais sobre a participação.
         </p>
+      </details>
 
-      </footer>
+      <details class="faq-item reveal">
+        <summary>A mentoria substitui acompanhamento psicológico ou jurídico?</summary>
+        <p>
+          Não. A mentoria é um conteúdo complementar e não substitui
+          acompanhamento psicológico, psiquiátrico ou orientação jurídica.
+        </p>
+      </details>
 
-    </section>
+      <details class="faq-item reveal">
+        <summary>Onde posso consultar as condições da inscrição?</summary>
+        <p>
+          As condições, os detalhes de acesso e as informações comerciais
+          devem ser consultados na página oficial de inscrição.
+        </p>
+      </details>
+
+    </div>
+
+  </section>
+
+
+
+<!-- ==========================================
+     PÁGINA 05: CHAMADA FINAL + RODAPÉ
+========================================== -->
+
+<section class="sales-panel final-cta" id="inscricao">
+
+  <div class="final-cta-content">
+
+    <p class="final-cta-text reveal">
+      Você quer apenas sair desse relacionamento? Ou quer construir uma vida
+      em que você nunca mais aceite viver algo parecido?
+    </p>
+
+    <span class="final-cta-subtext reveal">
+      São duas coisas diferentes. Só uma delas liberta de verdade.
+    </span>
+
+    <a href="#inscricao" class="main-button final-cta-button reveal">
+      GARANTIR MINHA VAGA
+    </a>
 
   </div>
+
+  <footer class="site-footer">
+    <p>
+      © 2026 Blindagem Emocional. Todos os direitos reservados.
+    </p>
+  </footer>
+
+</section>
+
 
 </div>
 
 
-    
 
-  </main>
+    </main>
 
-  <script src="script.js"></script>
-    <script src="horizontal.js"></script>
+     <script src="script.js"></script>
+
 
 
 </body>
+
 </html>
